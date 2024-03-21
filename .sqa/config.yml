@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: 2.0.0
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/acoathena/aco_simuls:
+      branch: main
+      repo: https://github.com/acoathena/aco_simuls
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/acoathena/aco_simuls git:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-tomato-cougar.sh
+        container: qc.acc_lumpy-blue-woodpecker
+  QC.Doc:
+    repos:
+      github.com/acoathena/aco_simuls find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.fuzzy-cream-urchin.sh
+        container: qc.doc_flimsy-khaki-baboon
+      github.com/acoathena/aco_simuls git:
+        commands:
+        - /usr/bin/env sh .sqa/script.stealthy-tangerine-scorpion.sh
+        container: qc.doc_lumpy-gamboge-tapir
+      github.com/acoathena/aco_simuls markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-pink-bongo.sh
+        container: qc.doc_pokey-khaki-ibis
+  QC.Lic:
+    repos:
+      github.com/acoathena/aco_simuls licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-saffron-cattle.sh
+        container: qc.lic_skanky-lavender-shrew
+  QC.Sec:
+    repos:
+      github.com/acoathena/aco_simuls bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.stealthy-viridian-cockroach.sh
+        container: qc.sec_hazy-apricot-koala
+  QC.Sty:
+    repos:
+      github.com/acoathena/aco_simuls flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-seashell-stingray.sh
+        container: qc.sty_lousy-brass-hummingbird
+  QC.Uni:
+    repos:
+      github.com/acoathena/aco_simuls pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-periwinkle-dachsbracke.sh
+        container: qc.uni_thirsty-olive-vulture
+  QC.Ver:
+    repos:
+      github.com/acoathena/aco_simuls get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.stealthy-rust-crane.sh
+        container: qc.ver_skimpy-turquoise-shark
+timeout: 5400
