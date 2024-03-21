@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/acoathena/aco_simuls git:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-pumpkin-lemming.sh
-        container: qc.acc_crabby-jade-collie
+        - /usr/bin/env sh .sqa/script.scanty-peach-hedgehog.sh
+        container: qc.acc_surly-razzmatazz-lynx
   QC.Doc:
     repos:
       github.com/acoathena/aco_simuls find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-teal-beetle.sh
-        container: qc.doc_snippy-gamboge-loon
+        - /usr/bin/env sh .sqa/script.chewy-ochre-coyote.sh
+        container: qc.doc_dorky-taupe-rhinoceros
       github.com/acoathena/aco_simuls git:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-cinnamon-manatee.sh
-        container: qc.doc_boozy-pink-mayfly
+        - /usr/bin/env sh .sqa/script.randy-pear-audemer.sh
+        container: qc.doc_smelly-ultramarine-iguana
       github.com/acoathena/aco_simuls markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-eggplant-walrus.sh
-        container: qc.doc_ugly-wisteria-cuscus
+        - /usr/bin/env sh .sqa/script.homely-cerise-ant.sh
+        container: qc.doc_blurry-aquamarine-dachsbracke
   QC.Lic:
     repos:
       github.com/acoathena/aco_simuls licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-linen-setter.sh
-        container: qc.lic_cloudy-scarlet-hound
+        - /usr/bin/env sh .sqa/script.stuffy-violet-beagle.sh
+        container: qc.lic_goopy-alizarin-tarantula
   QC.Sec:
     repos:
       github.com/acoathena/aco_simuls bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-khaki-toucan.sh
-        container: qc.sec_freaky-tangerine-beetle
+        - /usr/bin/env sh .sqa/script.gimpy-chestnut-dachshund.sh
+        container: qc.sec_muggy-charcoal-lobster
   QC.Sty:
     repos:
       github.com/acoathena/aco_simuls flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-azure-akbash.sh
-        container: qc.sty_snoopy-tan-wolfhound
+        - /usr/bin/env sh .sqa/script.jumpy-russet-hamster.sh
+        container: qc.sty_hilly-lime-penguin
   QC.Uni:
     repos:
       github.com/acoathena/aco_simuls pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-celadon-insect.sh
-        container: qc.uni_lousy-scarlet-bulldog
+        - /usr/bin/env sh .sqa/script.randy-grey-dingo.sh
+        container: qc.uni_silly-tan-lion
   QC.Ver:
     repos:
       github.com/acoathena/aco_simuls get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-maroon-gibbon.sh
-        container: qc.ver_shaggy-orange-dog
+        - /usr/bin/env sh .sqa/script.sickly-zucchini-ostrich.sh
+        container: qc.ver_tacky-ivory-bongo
 timeout: 5400
